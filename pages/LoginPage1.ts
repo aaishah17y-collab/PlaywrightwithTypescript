@@ -26,9 +26,14 @@ export class LoginPage1{
     }
 
     async verifyLogingSuccess(){
-        await expect(this.page).toHaveURL(/logged-in-successfully/);
+       // await expect(this.page).toHaveURL(/logged-in-successfully/);
+        await expect(this.page).toHaveURL('https://practicetestautomation.com/logged-in-successfully/')
         await expect(this.successMessage).toBeVisible();
+        await expect(this.successMessage).toContainText('successfully logged in');
+        await expect(this.logoutLink).toBeVisible();
     }
 
 
 }
+
+
