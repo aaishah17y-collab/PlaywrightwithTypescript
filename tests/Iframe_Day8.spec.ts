@@ -13,4 +13,4 @@ await editor.press('Backspace');
 await editor.fill('Hello I am learning Playwright');
 await expect(editor).toHaveText('Hello I am learning Playwright');
 
-})
+});
